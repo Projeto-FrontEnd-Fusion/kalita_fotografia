@@ -6,3 +6,14 @@
   box-sizing: border-box;
   font-family: 'Lato', sans-serif, helvetica;
 }
+
+@theme {
+  --color-primary: #533e29;
+  --color-secondary: #B78854;
+  --color-tertiary: #F9F6F4;
+  --color-quaternary: #F5F1EE;
+
+  --text-primary: #533e29;
+  --text-secondary: #F9F7F4;
+  --text-quaternary: #F5F1EE;
+}
