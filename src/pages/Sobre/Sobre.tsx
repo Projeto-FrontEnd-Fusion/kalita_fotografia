@@ -23,7 +23,7 @@ const Sobre = () => {
 
               <Link
                 to='/contato'
-                className='bg-secondary py-2 px-3 sm:py-3 sm:px-6 rounded-[48px] text-tertiary font-bold text-base cursor-pointer hover:opacity-80 active:opacity-60'>
+                className='bg-secondary py-2 px-3 sm:py-3 sm:px-6 rounded-[48px] text-tertiary font-bold text-base cursor-pointer hover:opacity-80 active:opacity-60 w-max block text-center'>
                   Vamos conversar
               </Link>
             </div>
