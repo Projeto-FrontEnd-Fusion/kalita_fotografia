@@ -1,12 +1,5 @@
 @import "tailwindcss";
 
-* {
-  /* margin: 0;
-  padding: 0; */
-  box-sizing: border-box;
-  font-family: 'Lato', sans-serif, helvetica;
-}
-
 @theme {
   --color-primary: #533e29;
   --color-secondary: #B78854;
@@ -20,4 +13,6 @@
   --text-quaternary: #F5F1EE;
 
   --text-md: 1rem;
+
+  --font-lato: 'Lato', sans-serif, helvetica;
 }
