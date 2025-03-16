@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import HomeImg from '../../assets/Picture-about-me.svg'
 
 const Sobre = () => {
@@ -20,10 +21,11 @@ const Sobre = () => {
               <h1 className='text-primary text-4xl sm:text-5xl xl:text-7xl font-homeKalita'>Kalita</h1>
               <p className='font-bold text-base xl:text-2xl mt-6 mb-[42px]'>Sorem ipsum dolor sit amet, consectetur.</p>
 
-              <button 
+              <Link
+                to='/contato'
                 className='bg-secondary py-2 px-3 sm:py-3 sm:px-6 rounded-[48px] text-tertiary font-bold text-base cursor-pointer hover:opacity-80 active:opacity-60'>
                   Vamos conversar
-              </button>
+              </Link>
             </div>
           
           </div>
