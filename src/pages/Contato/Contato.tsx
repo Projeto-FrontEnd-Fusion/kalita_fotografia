@@ -6,11 +6,12 @@ import ImgInstagram from "../../assets/Instagram.png"
 
 const Contato = () => {
   return (
-    <section className="font-lata relative w-full h-[calc(100vh-7rem)] flex justify-center items-center flex-col m-auto">
+    <section className="font-lata relative w-full h-[calc(100vh-12rem)] flex justify-center items-center flex-col m-auto mt-20">
 
-      <div className="absolute w-full top-20 left-0 h-[60%] bg-[#D9D9D9]"></div>
+      {/* Esta div cria o background atrás do título */}
+      <div className="absolute w-full top-5 left-0 h-[63%] bg-[#D9D9D9]"></div>
 
-      <div className="w-7xl flex justify-center items-center flex-col gap-6 mb-14">
+      <div className="w-7xl flex justify-center items-center flex-col gap-6">
         <h2 className="z-10 w-[556px] text-6xl font-bold text-[#545454]">
           Quer agendar uma sessão?
         </h2>
@@ -20,7 +21,7 @@ const Contato = () => {
             className="text-3xl font-bold text-[#533E29] relative after:content-[''] after:w-[98px] after:h-[1px] after:bg-black after:absolute after:left-[0px] after:top-[20px] after:translate-y-[-50%]">
           </div>
 
-          <p className="text-3xl font-bold text-[#242424] relative ml-[105px]">Entre em contato conosco</p>
+          <p className="text-3xl font-bold text-[#242424] relative ml-[105px] mb-14">Entre em contato conosco</p>
         </div>
       </div>
 
