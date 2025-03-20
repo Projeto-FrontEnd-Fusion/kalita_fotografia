@@ -5,12 +5,12 @@ import underline from '../../assets/header-underline.svg'
 const Home = () => {
   return (
     <section className="w-full h-[calc(100svh-114px)] bg-quaternary">
-      <div className="max-w-[1440px] p-4 flex justify-center items-center">
-        <div className="w-[413px] h-[120px] mt-32 flex flex-col gap-4 justify-center items-center">
+      <div className="max-w-[1440px] p-4 flex justify-center items-center m-auto">
+        <div className="w-[413px] h-[120px] mt-32 flex flex-col gap-6 space-y-5 justify-center items-center relative">
           <h1 className="text-5xl font-homeKalita text-primary text-center">
              Registrando suas melhores memórias
           </h1>
-          <div>
+          <div className='absolute bottom-5 left-[170px]'>
               <img src={underline} alt=""/>
           </div>
           <Link to='/portfolio'>
