@@ -23,9 +23,9 @@ const Contato = () => {
         <div className="absolute w-full top-5 left-0 h-[63%] bg-[#D9D9D9]"></div>
 
         <div className="w-7xl flex justify-center items-center flex-col gap-6">
-          <h2 className="z-10 w-[556px] text-6xl font-bold text-[#545454]">
+          <h1 className="z-10 w-[556px] text-6xl font-bold text-[#545454]">
             Quer agendar uma sessão?
-          </h2>
+          </h1>
           
           <div className="w-[556px]">
             <div 

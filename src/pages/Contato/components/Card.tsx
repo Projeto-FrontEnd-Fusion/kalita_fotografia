@@ -17,6 +17,7 @@ const Card = ({img, alt="", titulo="", textButton="", href=""}: cardProps ) => {
       <a
       href={href}
       target="_blank"
+      role="button"
       className="cursor-pointer flex justify-center items-center bg-secondary hover:bg-[#886a49] transition-all duration-300 w-44 h-11 border rounded-full border-none text-white"
       >
         {textButton}
