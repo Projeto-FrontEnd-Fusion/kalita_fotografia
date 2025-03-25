@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 @theme {
   /* Cores do projeto retiradas do figma */
   --color-primary: #533e29;
@@ -10,12 +12,16 @@
   --color-button-primary: #B78854; 
 
   /* Textos */
-  --color-color-heading: #545454; /* Cor títulos*/
-  --color-color-subtitle: #242424; /* Cor subtítulos*/
+  --color-color-heading: #545454; /* Cor títulos */
+  --color-color-subtitle: #242424; /* Cor subtítulos */
 
   --text-md: 1rem; /* 16px */
   --text-title: 4rem; /* 64px */
 
-  --font-lato: 'Lato', sans-serif, helvetica; /* fonte Lato, usado em todo site*/
-  --font-homeKalita: "La Belle Aurore", cursive; /* fonte La Belle Aurore, usado nos títulos*/
+  --font-lato: 'Lato', sans-serif, helvetica; /* fonte Lato, usado em todo site */
+  --font-homeKalita: "La Belle Aurore", cursive; /* fonte La Belle Aurore, usado nos títulos */
+
+  --text-primary: #533e29;
+  --text-secondary: #F9F7F4;
+  --text-quaternary: #F5F1EE;
 }
