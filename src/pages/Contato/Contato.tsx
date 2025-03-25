@@ -1,4 +1,4 @@
-import Card from "./components/Card";
+import Card from "./Card";
 import ImgWhatsapp from "../../assets/WhatsApp.png";
 import ImgGmail from "../../assets/Google.png";
 import ImgInstagram from "../../assets/Instagram.png";
