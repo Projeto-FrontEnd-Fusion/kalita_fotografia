@@ -1,80 +1,45 @@
-import { Link } from 'react-router-dom'
-import HomeImg from '../../assets/Picture-about-me.svg'
-
+import { Link } from "react-router-dom";
+import HomeImg from "../../assets/Picture-about-me.svg";
 const Sobre = () => {
   return (
-    <>
+    <section className='w-full md:h-[calc(100vh-180px)] py-10 md:py-0 bg-quaternary relative md:bg-white
+       before:content[""] before:hidden md:before:block before:top-0 before:left-1/2 before:-translate-x-1/2 before:w-[85%] before:h-full md:before:bg-[#E5DACE] before:absolute before:z-0
+      '>
+      <h1 className='text-primary text-[64px] font-bold font-lata leading-[110%] text-center mb-2 md:hidden'>Sobre mim</h1>
+      <div className='w-full h-full
+        md:flex md:items-center md:max-w-[85%] md:mx-auto xl:gap-32'>
+        <img
+          src={HomeImg}
+          alt='Foto da Kalita'
+          className='w-full rounded-xl h-auto
+            md:w-max md:overflow-visible md:relative md:flex-shrink-0 md:-translate-x-12
+            '
+        />
 
-      {/* Mobile */}
+        <div className='p-4
+          md:flex md:flex-col md:justify-center
+          '>
+          <h2 className='hidden md:block text-primary text-[64px] font-homeKalita mb-6 z-10'>Kalita</h2>
 
-      <main className='py-10 md:py-0 bg-quaternary md:bg-white'>
-        {/* md:bg-white */}
+          <p
+            className='text-base font-normal text-left text-[#242424] font-lata leading-[150%]
+                md:font-bold md:text-2xl md:mb-[42px] z-10 md:hidden'
+          >
+            Qorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.
+          </p>
 
+          <p className="z-10 xl:text-xl self-center text-[#242424] font-bold font-lata pr-3 max-md:hidden lg:text-lg">
+            Sorem ipsum dolor sit amet, consectetur.
+          </p>
 
-        <div className='md:hidden'>
-          <h1 className='text-primary text-[64px] font-bold font-lata leading-[110%] text-center mb-2 md:hidden'>Sobre mim</h1>
-          <div className='w-full'>
-            <img
-              src={HomeImg}
-              alt='imagem da kalita'
-              className='w-full h-auto'
-            />
-
-            <div className='p-4'>
-              <p
-                className='text-base text-left text-[#242424] font-lata leading-[150%]'
-              >
-                Qorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.
-              </p>
-
-              <Link
-                to='/contato'
-                className='bg-secondary py-3 px-6 rounded-[48px] text-tertiary font-bold font-lata text-base cursor-pointer hover:opacity-80 active:opacity-60 w-full block text-center mt-5'>
-                Vamos conversar
-              </Link>
-            </div>
-          </div>
+          <Link
+            to='/contato'
+            className='bg-secondary py-3 px-6 rounded-[48px] z-10 text-tertiary font-bold font-lata text-base cursor-pointer hover:opacity-80 active:opacity-60 transition-all w-full block text-center mt-5 md:mt-[42px] md:max-w-fit md:mx-auto '>
+            Entrar em contato
+          </Link>
         </div>
-
-
-        {/* Desktop */}
-
-        <div className='hidden md:flex justify-center px-6 lg:px-12 xl:px-20'>
-          <div className='bg-[#E5DACE] w-full h-[calc(100vh-180px)] max-w-7xl mx-auto  '>
-            <div className='h-full flex items-center px-3'>
-
-              <div className='overflow-visible relative flex-shrink-0'>
-                <img
-                  src={HomeImg}
-                  alt='imagem da kalita'
-                  className='-translate-x-6 lg:-translate-x-20 xl:-translate-x-36'
-                />
-              </div>
-
-
-              <div>
-                <h1 className='text-primary text-[64px] font-homeKalita mb-6'>Kalita</h1>
-                <p className='font-bold font-lata text-[#242424] text-2xl mb-[42px]'>Sorem ipsum dolor sit amet, consectetur.</p>
-
-                <Link
-                  to='/contato'
-                  className='bg-secondary py-3 px-6 rounded-[48px] text-tertiary font-bold text-base cursor-pointer hover:opacity-80 active:opacity-60 w-max block text-center mx-auto'>
-                  Vamos conversar
-                </Link>
-              </div>
-
-            </div>
-
-
-          </div>
-        </div>
-
-      </main>
-
-
-
-
-    </>
-  )
-}
-export default Sobre
+      </div>
+    </section >
+  );
+};
+export default Sobre;
