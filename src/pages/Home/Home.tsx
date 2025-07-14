@@ -9,8 +9,8 @@ import img3 from '../../assets/Image3.png'
 const Home = () => {
   return (
     <section className="w-full h-svh bg-quaternary">
-      <div className="max-w-[1440px] p-4 flex justify-center items-center m-auto">
-        <div className="w-[413px] h-[120px] mt-32 flex flex-col gap-6 space-y-5 justify-center items-center relative">
+      <div className="max-w-[1440px] p-4 hidden sm:flex justify-center items-center m-auto">
+        <div className="w-[413px] h-[120px] mt-20 flex flex-col gap-6 space-y-5 justify-center items-center relative">
           <h1 className="text-5xl font-homeKalita text-primary text-center">
              Registrando suas melhores memórias
           </h1>
@@ -28,12 +28,12 @@ const Home = () => {
           <img src={img3} alt="" />
         </div>
         <div className='flex flex-col gap-4'>
-        <div>
-          <img src={img1} alt="" />
-        </div>
-        <div>
-          <img src={img2} alt="" />
-        </div>
+          <div>
+            <img src={img1} alt="" />
+          </div>
+          <div>
+            <img src={img2} alt="" />
+          </div>
         </div>
       </div>
     </section>
