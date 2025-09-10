@@ -25,18 +25,6 @@
   --text-secondary: #F9F7F4;
   --text-quaternary: #F5F1EE;
 
-  /* Animations */
-  --animate-openMenu: openMenu 0.5s ease-out;
-  @keyframes openMenu {
-    0% {
-      opacity: 0;
-      transform: translate(100%);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(0%);
-    }
-  }
 
 }
 
