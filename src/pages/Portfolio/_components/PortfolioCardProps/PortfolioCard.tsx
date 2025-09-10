@@ -11,7 +11,6 @@ const PortfolioCard = ({ title, image, alt, path }: PortfolioCardProps) => {
   return (
     <article
       className={`xl:flex flex-shrink-0 relative xl:bg-quaternary bg-transparent xl:w-[264px] w-[264px] h-[500px] xl:nth-[even]:-mt-[-20px] xl:mt-18 mt-5 xl:mb-14 mb-0`}
-      // className="relative flex-shrink-0 w-[264px] h-[500px] bg-transparent xl:bg-quaternary"
     >
       <div className="absolute xl:top-[-18px] top-[-17px] xl:w-full w-[264px] flex xl:justify-evenly justify-center items-center xl:gap-0 gap-4">
         <div className="xl:flex hidden xl:w-[34px] lg:w-[34px] w-[17px] h-[2px] bg-primary" />
@@ -21,7 +20,6 @@ const PortfolioCard = ({ title, image, alt, path }: PortfolioCardProps) => {
       <figure className="w-full">
         <img
           className="w-full xl:h-[550px] h-[458px] absolute top-8 xl:mt-[9px] mt-0 xl:ml-[30px] ml-0 object-cover"
-          // className="w-full h-full object-cover rounded-lg"
           src={image}
           alt={alt}
         />
