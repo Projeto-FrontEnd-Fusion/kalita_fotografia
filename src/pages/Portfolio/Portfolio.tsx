@@ -91,17 +91,15 @@ const Portfolio = () => {
         <section className="relative md:hidden flex justify-center items-center mt-5 md:mt-0">
           <Swiper
             modules={[Pagination, Navigation, EffectFade]}
-            effect="fade"
-            slidesPerView={1}
-            spaceBetween={20}
-            pagination={{ clickable: true }}
-            navigation={{
-              prevEl: ".prev-button",
-              nextEl: ".next-button",
-            }}
-            className="w-[264px] h-[550px]"
+            // effect="fade"
             fadeEffect={{ crossFade: true }}
+            slidesPerView={1}
+            initialSlide={0}
+            // spaceBetween={20}
+            pagination={{ clickable: true }}
+            className="w-[264px] h-[550px]"
             onSwiper={(swiper) => setSwiperInstance(swiper)}
+            navigation={false}
             onSlideChange={(swiper) => {
               setIsBeginning(swiper.isBeginning);
               setIsEnd(swiper.isEnd);
@@ -116,13 +114,13 @@ const Portfolio = () => {
 
           <button className="prev-button absolute left-[-40px] top-1/2 -translate-y-1/2 z-20 p-2 cursor-pointer text-primary"
             onClick={() => swiperInstance?.slidePrev()}
-            disabled={isBeginning} 
+            disabled={isBeginning}
           >
              <FaChevronLeft className={isBeginning ? "opacity-50" : ""} />
           </button>
 
           <button className="next-button absolute right-[-40px] top-1/2 -translate-y-1/2 z-2 p-2 cursor-pointer text-primary"
-             onClick={() => swiperInstance?.slideNext()}
+            onClick={() => swiperInstance?.slideNext()}
             disabled={isEnd}
           >
             <FaChevronRight className={isEnd ? "opacity-50" : ""} />
