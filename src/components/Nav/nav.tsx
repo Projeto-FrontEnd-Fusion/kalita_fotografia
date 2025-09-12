@@ -22,7 +22,7 @@ export function Nav() {
      
       <button
         onClick={toggleMenu}
-        className="2sm:hidden z-50 relative w-8 h-8 flex items-center justify-center"
+        className="2sm:hidden z-50 relative w-8 h-8 flex items-center justify-center cursor-pointer"
       >
         {/* Ícone hamburguer */}
         <img
@@ -51,7 +51,7 @@ export function Nav() {
 
       {/* Menu lateral */}
       <section
-        className={`fixed top-28 right-0 h-screen w-1/2 bg-quaternary z-50 
+        className={`fixed 2sm:hidden top-28 right-0 h-screen w-1/2 bg-quaternary z-50 
         transform transition-transform duration-700 ease-in-out
         ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
