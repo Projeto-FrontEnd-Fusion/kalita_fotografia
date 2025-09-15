@@ -39,7 +39,7 @@ const Home = () => {
           <Button path='/contato' variant='secondary' size='mobile'>Entre em Contato</Button>
         </div>
          <div className='w-full m-auto mt-14 p-4 bg-quaternary gap-4 '>
-            <div className='flex flex-col justify-between gap-4'>
+            <div className='flex flex-col items-center justify-between gap-4'>
               {imgHome.map((image) => (
                 <figure key={image.id}>
                     <img src={image.src} alt={image.alt} />
