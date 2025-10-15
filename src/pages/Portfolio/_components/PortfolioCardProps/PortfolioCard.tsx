@@ -7,10 +7,10 @@ interface PortfolioCardProps {
   path: string;
 }
 
-const PortfolioCard = ({ title, image, alt, path, }: PortfolioCardProps) => {
+const PortfolioCard = ({ title, image, alt, path }: PortfolioCardProps) => {
   return (
     <article
-      className={`xl:flex flex-shrink-0 relative xl:bg-quaternary bg-transparent xl:w-[264px] w-[264px] xl:h-[500px] h-[500px] xl:nth-[even]:-mt-[-20px] xl:mt-18 mt-5 xl:mb-14 mb-0`}
+      className={`xl:flex flex-shrink-0 relative xl:bg-quaternary bg-transparent xl:w-[264px] w-[264px] h-[500px] xl:nth-[even]:-mt-[-20px] xl:mt-18 mt-5 xl:mb-14 mb-0`}
     >
       <div className="absolute xl:top-[-18px] top-[-17px] xl:w-full w-[264px] flex xl:justify-evenly justify-center items-center xl:gap-0 gap-4">
         <div className="xl:flex hidden xl:w-[34px] lg:w-[34px] w-[17px] h-[2px] bg-primary" />
@@ -33,9 +33,8 @@ const PortfolioCard = ({ title, image, alt, path, }: PortfolioCardProps) => {
       >
         Ver fotos
       </Link>
-      
     </article>
   );
 };
 
-export default PortfolioCard
+export default PortfolioCard;

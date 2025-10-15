@@ -31,7 +31,7 @@ const Home = () => {
     <section className="w-full h-svh bg-quaternary">
 
       {/* Mobile */}
-      <div className='sm:hidden flex flex-col items-center justify-center gap-4 mt-28'>
+      <div className='sm:hidden flex flex-col items-center justify-center gap-4'>
         <div className="w-full h-[120px] px-4 mt-16 flex flex-col gap-6 space-y-5 justify-center items-center relative">
           <h1 className="text-5xl font-homeKalita text-primary text-center">
              Registrando suas melhores memórias
@@ -39,7 +39,7 @@ const Home = () => {
           <Button path='/contato' variant='secondary' size='mobile'>Entre em Contato</Button>
         </div>
          <div className='w-full m-auto mt-14 p-4 bg-quaternary gap-4 '>
-            <div className='flex flex-col justify-between gap-4'>
+            <div className='flex flex-col items-center justify-between gap-4'>
               {imgHome.map((image) => (
                 <figure key={image.id}>
                     <img src={image.src} alt={image.alt} />
@@ -55,7 +55,7 @@ const Home = () => {
      
 
       {/* Desktop */}
-      <div className="max-w-[1440px] p-4 hidden sm:flex justify-center items-center m-auto mt-28">
+      <div className="max-w-[1440px] p-4 hidden sm:flex justify-center items-center m-auto">
         <div className="w-[413px] h-[120px] mt-20 flex flex-col gap-6 space-y-5 justify-center items-center relative">
           <h1 className="text-5xl font-homeKalita text-primary text-center">
              Registrando suas melhores memórias
