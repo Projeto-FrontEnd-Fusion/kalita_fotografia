@@ -1,26 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
+
 @import "tailwindcss";
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-kalita-background-light: #fcfafa;
+  --color-kalita-background-medium: #f7f7f7;
+  --color-kalita-brown-medium: #8d5843;
+  --color-kalita-brown-dark: #2e201d;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  --font-antonio: "Antonio", sans-serif;
+  --font-nunito: "Nunito Sans", sans-serif;
 }
