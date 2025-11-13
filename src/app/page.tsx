@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 //ARQUIVO DE ROTAS
 export default function Home() {
