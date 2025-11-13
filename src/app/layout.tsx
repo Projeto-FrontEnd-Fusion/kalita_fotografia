@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Header } from "@/domain/header";
-import { Footer } from "@/domain/footer";
+import { Header } from "@/app/shared/ui/Header";
+import { Providers } from "./providers";
+import { Footer } from "./shared/ui/Footer";
 
 export const metadata: Metadata = {
   title: "Kalita - Developement Website",
@@ -14,10 +15,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body>
-        <Header />
-        {children}
-      </body>
+      <Providers>
+        <body>
+          <Header />
+          {children}
+          <Footer /> 
+        </body>
+      </Providers>
     </html>
   );
 }
