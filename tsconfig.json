@@ -13,13 +13,13 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "plugins": [{"name": "next"}],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/domain/*": ["./src/domain/*"],
+      "@/infrastructure/*": ["./src/infrastructure/*"],
+      "@/shared/*": ["./src/shared/*"],
+      "@/lib/*": ["./src/lib/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

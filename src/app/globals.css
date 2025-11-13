@@ -5,11 +5,30 @@
 @tailwind utilities;
 
 @theme {
-  --color-kalita-background-light: #fcfafa;
-  --color-kalita-background-medium: #f7f7f7;
-  --color-kalita-brown-medium: #8d5843;
+  --color-kalita-bg-light: #fcfafa;
+  --color-kalita-bg-medium: #f7f7f7;
+  --color-kalita-bg-light-brown: #917a71;
+
+  --color-kalita-brown-medium: #8B5843;
+  --color-kalita-error: #ff0f0f;
   --color-kalita-brown-dark: #2e201d;
 
   --font-antonio: "Antonio", sans-serif;
   --font-nunito: "Nunito Sans", sans-serif;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.4s ease-out forwards;
 }
