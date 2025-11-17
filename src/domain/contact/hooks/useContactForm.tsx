@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import type { ContactSchema, ContactSchemaType } from "@/app/shared/schemas/contactSchema";
+import type { ContactSchema, ContactSchemaType } from "@/domain/contact/schemas/contactSchema";
 
 export const useContactForm = (schema: typeof ContactSchema) => {
   const { 
