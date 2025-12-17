@@ -45,7 +45,7 @@ export function MenuButton() {
       <div className="absolute left-0 top-[140px] w-full overflow-hidden z-50">
         {open && (
           <div
-            className="w-full bg-kalita-background-light p-8
+            className="w-full bg-kalita-bg-light p-8
         transform transition-all duration-500 ease-out animate-slideDown 
         ">
 
