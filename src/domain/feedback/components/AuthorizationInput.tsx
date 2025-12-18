@@ -23,7 +23,9 @@ export function AuthorizationInput({ name, namePlaceholderInput, control, errors
               {namePlaceholderInput}
             </p>
           </div>
-          <ErrorMessage message={errors?.[name]?.message} />
+          <div className="mt-4">
+            <ErrorMessage message={errors?.[name]?.message} />
+          </div>
         </div>
 
       )}
