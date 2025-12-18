@@ -4,7 +4,7 @@ import { FeedbackForm } from "@/domain/feedback/components/feedback-form";
 export default function FeedbackPage() {
   return (
     <div className="flex justify-center pt-[46px] pb-[86px]">
-      <div className="flex flex-col gap-6 px-6">
+      <div className="flex flex-col items-center gap-6 px-6 w-full md:max-w-[740px]">
         {/* Feedback title */}
         <div className="text-center">
           <h1 className="text-kalita-brown-dark font-bold font-antonio text-[32px] md:text-5xl">Compartilhe sua experiência</h1>
