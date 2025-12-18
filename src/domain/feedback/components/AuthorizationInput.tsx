@@ -1,0 +1,32 @@
+import ErrorMessage from "@/app/shared/ui/form/ErrorMessage";
+import { IRHFProps } from "@/app/shared/ui/form/types/types";
+import { Controller } from "react-hook-form";
+import { AuthorizationInputProps } from "../types/AuthorizationInputProps";
+
+export function AuthorizationInput({ name, namePlaceholderInput, control, errors }: AuthorizationInputProps) {
+  return (
+    <Controller
+      name={name}
+      control={control}
+      rules={{ required: true }}
+      render={({ field }) => (
+        <div className="flex flex-col gap-2">
+          <div className="flex justify-center items-center gap-[13px] px-4 py-[22px] bg-kalita-brown-dark rounded-sm">
+            <input
+              {...field}
+              type="checkbox"
+              width={18}
+              height={18}
+              className="h-[18px] w-[18px]"
+            />
+            <p className="text-kalita-bg-light text-sm font-nunito">
+              {namePlaceholderInput}
+            </p>
+          </div>
+          <ErrorMessage message={errors?.[name]?.message} />
+        </div>
+
+      )}
+    />
+  )
+}
