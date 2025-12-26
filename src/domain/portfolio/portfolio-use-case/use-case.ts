@@ -21,6 +21,7 @@ export class PortfolioService implements IPortfolioRepository {
 
   async getAllPortfolioPhotos():Promise<PhotoInDb[]>{
     const response = await this.httpPortfolioIntance.get("/portfolio") as AxiosResponse<CloudinaryResponse>
+    console.log(response.data)
     return response.data.data
   }
 }
