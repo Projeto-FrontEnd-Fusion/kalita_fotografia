@@ -22,7 +22,7 @@ export function FeedbackForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col gap-10 bg-kalita-bg-medium py-8 px-12 border border-kalita-bg-light-brown rounded-lg max-w-[520px]"
+      className="flex flex-col gap-10 bg-kalita-bg-medium py-8 px-12 border border-kalita-bg-light-brown rounded-lg max-w-[520px] drop-shadow-xl/25"
     >
       <Input
         name="name"
