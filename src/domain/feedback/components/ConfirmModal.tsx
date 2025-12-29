@@ -26,7 +26,7 @@ export function ConfirmModal({ isOpen, onCancel, onConfirm, buttonText }: Confir
             <PiWarningCircleFill color="red" className="w-16 h-16" />
           </div>
 
-          <h2 className="mb-6 text-kalita-brown-dark font-nunito font-semibold">Voce tem certeza que quer enviar esse feedback?</h2>
+          <h2 className="mb-6 text-kalita-brown-dark font-nunito font-semibold text-center">Voce tem certeza que quer enviar esse feedback?</h2>
 
           <button
             onClick={onConfirm}
