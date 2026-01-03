@@ -5,8 +5,9 @@ export interface DescriptionProps extends ComponentProps<"p"> {
   content: string;
   size: "small" | "medium" | "larger";
   align: "left" | "center" | "right";
+  addClass?: string;
 }
-export const Description = ({ content, ...props }: DescriptionProps) => {
+export const Description = ({ content, addClass, ...props }: DescriptionProps) => {
 
   const [windowWidth, setWindowWidth] = useState<number | null>(null);
 
@@ -31,7 +32,7 @@ export const Description = ({ content, ...props }: DescriptionProps) => {
   return (
     <p
       {...props}
-      className="lg:w-8/12 whitespace-pre-line md:whitespace-normal center-description-small font-nunito leading-relaxed text-lg lg:text-2xl"
+      className={`lg:w-8/12 whitespace-pre-line md:whitespace-normal center-description-small font-nunito leading-relaxed text-lg lg:text-2xl ${addClass}`}
     >
       {displayContent}
       
