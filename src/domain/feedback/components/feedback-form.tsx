@@ -1,12 +1,18 @@
-'use client'
+"use client";
 
 import Input from "@/app/shared/ui/form/input";
 import { useFeedbackForm } from "../hooks/useFeedbackForm";
-import { FeedbackSchema, FeedbackSchemaType } from "../schemas/feedbackSchema";
+import {
+  feedbackFormContent,
+  FeedbackSchema,
+  FeedbackSchemaType,
+} from "../schemas/feedbackSchema";
 import { Textarea } from "./Textarea";
 import { AuthorizationInput } from "./AuthorizationInput";
 import { ConfirmModal } from "./ConfirmModal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Loader } from "lucide-react";
+import { useSendFeedBack } from "../hooks/useSendFeedBack";
 
 export function FeedbackForm() {
   const {
@@ -14,17 +20,31 @@ export function FeedbackForm() {
     errors,
     control,
     reset: resetForm,
-    clearErrors
+    clearErrors,
   } = useFeedbackForm(FeedbackSchema);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [pendingData, setPendingData] = useState<FeedbackSchemaType | null>(null);
+  const [pendingData, setPendingData] = useState<FeedbackSchemaType | null>(
+    null
+  );
+  const { mutate, isPending, isError } = useSendFeedBack();
 
+  useEffect(() => {
+    const feedback = {
+      name: "Maria Silva",
+      sessionType: "Ensaio Gestante",
+      testimonial:
+        "A experiência foi maravilhosa! A fotógrafa foi muito atenciosa e as fotos ficaram incríveis. Super recomendo!",
+      authorizedToPostFeedback: true,
+    };
+
+    resetForm(feedback);
+  }, []);
 
   const onSubmit = (formData: FeedbackSchemaType) => {
     setPendingData(formData);
     setIsModalOpen(true);
-  }
+  };
 
   const handleConfirmSubmit = async () => {
     if (!pendingData) return;
@@ -32,12 +52,12 @@ export function FeedbackForm() {
     console.log("ENVIANDO PARA API:", pendingData);
 
     // await fetch("/api/feedback", { ... })
+    mutate(pendingData);
 
     setIsModalOpen(false);
     setPendingData(null);
     resetForm();
   };
-
 
   return (
     <>
@@ -45,43 +65,52 @@ export function FeedbackForm() {
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col gap-10 bg-kalita-bg-medium py-8 px-12 border border-kalita-bg-light-brown rounded-lg max-w-[520px] drop-shadow-xl/25"
       >
-        <Input
-          name="name"
-          control={control}
-          errors={errors}
-          nameInput="Seu nome"
-          nameLabelInput="name"
-          namePlaceholderInput="Digite seu nome"
-          typeInput="text"
-        />
-
-        <Input
-          name="sessionType"
-          control={control}
-          errors={errors}
-          nameInput="Qual foi o tipo de sessão?"
-          nameLabelInput="sessionType"
-          namePlaceholderInput="Parto, acompanhamento do bebê, gestante..."
-          typeInput="text"
-        />
+        {isPending && <Loader className="animate-spin" />} caregando...
+        {isError && "Falha ao enviar os dados"}
+       
+        {feedbackFormContent.map(({ id, label, placeholder, type }) =>
+          type === "textarea" ? (
 
 
-        <Textarea
-          name="feedback"
-          nameInput="Seu depoimento:"
-          namePlaceholderInput="Descreva aqui a sua experiência..."
-          control={control}
-          errors={errors}
-        />
+            <fieldset key={id}>
+              <Textarea
+                name={id}
+                nameInput={label}
+                namePlaceholderInput={placeholder as string}
+                control={control}
+                errors={errors}
+              />
+            </fieldset>
+            
 
-        <AuthorizationInput
-          name="authorization"
-          namePlaceholderInput="Autorizo a publicação deste feedback no site Kálita Fotografias. Entendo que meu nome e depoimento poderão ser exibidos publicamente."
-          control={control}
-          errors={errors}
-        />
+          ) : type === "text" ? (
 
 
+            <fieldset key={id}>
+              <Input
+                name={id}
+                control={control}
+                errors={errors}
+                nameInput={label}
+                nameLabelInput={label}
+                namePlaceholderInput={placeholder as string}
+                typeInput={type}
+              />
+            </fieldset>
+          ) : (
+
+            
+            <fieldset key={id}>
+              <AuthorizationInput
+                name={id}
+                namePlaceholderInput={label}
+                control={control}
+                errors={errors}
+              />
+              
+            </fieldset>
+          )
+        )}
         <button
           type="submit"
           className="bg-kalita-brown-medium text-kalita-bg-light h-[52px] hover:bg-kalita-brown-dark cursor-pointer rounded-md"
@@ -97,5 +126,5 @@ export function FeedbackForm() {
         buttonText="Confirmar"
       />
     </>
-  )
+  );
 }
