@@ -15,8 +15,8 @@ export const useFeedbackForm = (schema: typeof FeedbackSchema) => {
     defaultValues: {
       name: "",
       sessionType: "",
-      feedback: "",
-      authorization: false
+      testimonial: "",
+      authorizedToPostFeedback: false
     }
   });
 
