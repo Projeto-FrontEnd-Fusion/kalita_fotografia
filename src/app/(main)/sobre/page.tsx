@@ -37,13 +37,9 @@ export default function SobreMim(){
                                 />
 
                                 <SubTitle 
-                                content="Lorem ipsum dolor sit amet consectetur adipiscing elit. 
-                                        Quisque faucibus ex sapien vitae pellentesque sem placerat. 
-                                        In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. 
-                                        Pulvinar vivamus fringilla lacus nec metus bibendum egestas. 
-                                        Iaculis massa nisl malesuada lacinia integer nunc posuere. 
-                                        Ut hendrerit semper vel class aptent taciti sociosqu. 
-                                        Ad litora torquent per conubia nostra inceptos himenaeos."
+                                content="A fotografia sempre foi, para mim, uma forma de contar histórias reais. Histórias feitas de olhares, gestos, silêncios e conexões que acontecem naturalmente. Meu trabalho é registrar a vida como ela é, sem poses forçadas, valorizando a autenticidade de cada momento e a essência de cada família.
+
+Acredito que as melhores lembranças não estão apenas nos grandes eventos, mas nos detalhes do dia a dia: um abraço espontâneo, um sorriso tímido, o carinho entre mãe e filho. É isso que busco preservar em cada clique."
                                 align="center" size="small" 
                             />
                             </div>
@@ -56,10 +52,9 @@ export default function SobreMim(){
                                 />
 
                                 <SubTitle 
-                                content="Lorem ipsum dolor sit amet consectetur adipiscing elit. 
-                                        Quisque faucibus ex sapien vitae pellentesque sem placerat. 
-                                        In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. 
-                                        Pulvinar vivamus fringilla lacus nec metus bibendum egestas. 
+                                content="A fotografia sempre foi, para mim, uma forma de contar histórias reais. Histórias feitas de olhares, gestos, silêncios e conexões que acontecem naturalmente. Meu trabalho é registrar a vida como ela é, sem poses forçadas, valorizando a autenticidade de cada momento e a essência de cada família.
+
+É isso que busco preservar em cada clique. 
                                         "
                                 align="left" size="small" 
                             />
@@ -80,7 +75,7 @@ export default function SobreMim(){
                         <div className="hidden md:block absolute -top-4 -right-4 lg:left-4 lg:h-[661px] w-full h-full border border-kalita-bg-light-brown rounded-lg"/>
                         <div className="relative w-[412px] h-[254px] md:w-[264px] md:h-[382px] lg:w-[520px] lg:h-[631px] overflow-hidden rounded-lg bg-gray-200">
                             <Image 
-                                src="/Caminho.jpg"
+                                src="/sobremin.svg"
                                 alt="Família"
                                 fill
                                 className="object-cover"
@@ -106,11 +101,9 @@ export default function SobreMim(){
                     
                     <div className="mt-8">
                         <SubTitle 
-                            content="Lorem ipsum dolor sit amet consectetur adipiscing elit. 
-                                    Quisque faucibus ex sapien vitae pellentesque sem placerat. 
-                                    In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. 
-                                    Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. 
-                                    Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
+                            content="A fotografia documental é sobre verdade. É estar presente sem interferir, observando e registrando momentos reais à medida que acontecem. Diferente de ensaios tradicionais, ela não busca poses perfeitas, mas emoções sinceras, conexões reais e histórias autênticas.
+
+Cada fotografia carrega sentimento, contexto e memória. É um registro que atravessa o tempo e ganha ainda mais valor com os anos."
                             align="center"
                             size="small"
                         />
@@ -171,14 +164,14 @@ export function TagsSection({txtTags} : TagsSectionProps){
                     </div>
                 ))}
                 
-                {txtTags.slice(5, 6).map((tag) => (
-                    <span className="col-span-3 md:col-span-2 flex items-center justify-center px-4 py-2 border border-kalita-bg-light-brown rounded-xl font-medium text-xs md:text-sm lg:text-base">
+                {txtTags.slice(5, 6).map((tag, index) => (
+                    <span key={index} className="col-span-3 md:col-span-2 flex items-center justify-center px-4 py-2 border border-kalita-bg-light-brown rounded-xl font-medium text-xs md:text-sm lg:text-base">
                         {tag}
                     </span>
                 ))}
                                 
-                {txtTags.slice(6, 7).map((tag) => (
-                    <span className="col-span-3 md:col-span-4 flex items-center justify-center px-4 py-2 border border-kalita-bg-light-brown rounded-xl font-medium text-xs md:text-sm lg:text-base">
+                {txtTags.slice(6, 7).map((tag, index) => (
+                    <span key={index} className="col-span-3 md:col-span-4 flex items-center justify-center px-4 py-2 border border-kalita-bg-light-brown rounded-xl font-medium text-xs md:text-sm lg:text-base">
                         {tag}
                     </span>
                 ))}
