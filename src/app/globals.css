@@ -2,11 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
 
 @import "tailwindcss";
-@tailwind utilities;
 
-/* *{
-  border: 1px solid red;
-} */
 
 * {
   @apply transition-all duration-500
@@ -17,6 +13,8 @@
   --color-kalita-bg-medium: #f7f7f7;
   --color-kalita-bg-light-brown: #917a71;
   --color-kalita-portfolio: #E3DEDC;
+  --color-kalita-bg-medium-2: hsl(26, 19%, 93%);
+  
 
   --color-kalita-brown-medium: #8B5843;
   --color-kalita-error: #ff0f0f;
@@ -24,6 +22,7 @@
 
   --font-antonio: "Antonio", sans-serif;
   --font-nunito: "Nunito Sans", sans-serif;
+  --color-foreground: hsl(0 10% 50%);
 
 
   /* Mobile First */
