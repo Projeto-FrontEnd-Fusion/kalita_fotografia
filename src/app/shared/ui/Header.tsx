@@ -14,14 +14,14 @@ export function Header() {
   ]
 
   return (
-    <header className='flex items-center justify-between px-6 py-4 bg-kalita-background-medium w-full h-[140px] z-10 '>
+    <header className='flex items-center justify-between px-6 py-4 bg-kalita-bg-medium-2 w-full h-[140px] z-10 relative'>
       <div className='flex items-center gap-7'>
         <Link href={'dashboard/portfolio'}>
         <Image
           src='/kalita-logo.svg'
           alt='Logo da kalita'
-          width={120}
-          height={120}
+          width={90}
+          height={90}
           priority
         />
         </Link>
@@ -57,8 +57,7 @@ export function Header() {
           <MenuButton />
         </div>
       </div>
-
-
+      <div className='border-b border-kalita-bg-light-brown w-[90%] bottom-4 absolute left-1/2 transform -translate-1/2'></div>
     </header>
   )
 }
