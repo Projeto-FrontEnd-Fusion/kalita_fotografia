@@ -1,5 +1,6 @@
-import { ArrowUp, Instagram } from "lucide-react";
+import { ArrowUp, Instagram, InstagramIcon } from "lucide-react";
 import Link from "next/link";
+import { BsInstagram } from "react-icons/bs";
 
 export function Footer() {
   const navLinks = [
@@ -10,18 +11,28 @@ export function Footer() {
   ]
 
   return (
-    <footer className="w-full bg-kalita-background-medium flex flex-col">
-      <div className="flex flex-col items-center px-8 py-4 border-b border-[#917A71] md:flex-row md:justify-between md:p-8">
-        <nav className="flex flex-col items-center gap-3 md:flex-row">
+    <footer className="w-full bg-kalita-background-medium flex flex-col bg-kalita-bg-medium-2">
+      <div className="flex flex-col items-center px-8 py-4 border-b border-[#917A71] md:flex-row md:justify-between md:p-8 h-80">
+        <nav className="flex flex-col items-center gap-3 md:flex-row h-72 justify-between">
           {navLinks.map(item => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-kalita-brown-dark text-sm md:text-kalita-brown-medium"
+              className="text-sm md:text-kalita-brown-medium"
             >
-              {item.name}
+             <span className="text-kalita-bg-light-brown"> {item.name}</span>
             </Link>
           ))}
+              <Link
+              href={'l'}
+              className="text-sm md:text-kalita-brown-medium"
+            >
+             <span className="text-kalita-bg-light-brown flex gap-2">
+              <BsInstagram />
+              Me Acompanhe no Instagram
+              
+              </span>
+            </Link>
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
