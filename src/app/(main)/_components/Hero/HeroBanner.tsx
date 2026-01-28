@@ -12,16 +12,12 @@ export const HeroBanner: React.FC = () => {
   const slidesPerPageDesktop: number = 3;
   const slidesPerPageMobile: number = 1;
 
-  const isMobile =
-    typeof window !== "undefined" && window.innerWidth < 768;
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
-  const slidesPerPage = isMobile
-    ? slidesPerPageMobile
-    : slidesPerPageDesktop;
+  const slidesPerPage = isMobile ? slidesPerPageMobile : slidesPerPageDesktop;
 
   const totalSlides: number = slidePayload.length;
-  const maxPage: number =
-    Math.ceil(totalSlides / slidesPerPage) - 1;
+  const maxPage: number = Math.ceil(totalSlides / slidesPerPage) - 1;
 
   const nextPage = (): void => {
     setCurrentPage((prev) => (prev >= maxPage ? 0 : prev + 1));
@@ -78,28 +74,32 @@ export const HeroBanner: React.FC = () => {
 
         <button
           onClick={prevPage}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-8 
                      w-10 h-10 rounded-full bg-white/8 backdrop-blur-sm 
                      shadow-lg flex items-center justify-center
                       hover:scale-110 transition-all duration-300
                      active:scale-95 group"
           aria-label="Anterior"
         >
-          <ChevronLeft className="w-6 h-6 text-white
-                                group-hover:-translate-x-0.5 transition-transform" />
+          <ChevronLeft
+            className="w-6 h-6 text-white
+                                group-hover:-translate-x-0.5 transition-transform"
+          />
         </button>
 
         <button
           onClick={nextPage}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-8 
                      w-10 h-10 rounded-full bg-white/8 backdrop-blur-sm 
                      shadow-lg flex items-center justify-center
                       hover:scale-110 transition-all duration-300
                      active:scale-95 group"
           aria-label="Próximo"
         >
-          <ChevronRight className="w-6 h-6 text-white 
-                                 group-hover:translate-x-0.5 transition-transform" />
+          <ChevronRight
+            className="w-6 h-6 text-white 
+                                 group-hover:translate-x-0.5 transition-transform"
+          />
         </button>
       </div>
 

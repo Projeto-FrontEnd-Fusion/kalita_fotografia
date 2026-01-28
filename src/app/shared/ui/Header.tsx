@@ -14,9 +14,10 @@ export function Header() {
   ]
 
   return (
-    <header className='flex items-center justify-between px-6 py-4 bg-kalita-bg-medium-2 w-full h-[140px] z-10 relative'>
+    <header className='flex items-center justify-between px-6 py-4 bg-kalita-bg-medium-2 w-full h-[140px] md:h-24 z-10 relative'>
       <div className='flex items-center gap-7'>
         <Link href={'dashboard/portfolio'}>
+        
         <Image
           src='/kalita-logo.svg'
           alt='Logo da kalita'
