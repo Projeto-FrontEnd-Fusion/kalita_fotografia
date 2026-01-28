@@ -11,9 +11,9 @@ export function Footer() {
   ]
 
   return (
-    <footer className="w-full bg-kalita-background-medium flex flex-col bg-kalita-bg-medium-2">
+    <footer className="w-full bg-kalita-background-medium flex flex-col bg-kalita-bg-medium-2 ">
       <div className="flex flex-col items-center px-8 py-4 border-b border-[#917A71] md:flex-row md:justify-between md:p-8 h-80">
-        <nav className="flex flex-col items-center gap-3 md:flex-row h-72 justify-between">
+        <nav className="flex flex-col items-center gap-3 md:flex-row h-72 md:h-28 justify-between">
           {navLinks.map(item => (
             <Link
               key={item.href}
