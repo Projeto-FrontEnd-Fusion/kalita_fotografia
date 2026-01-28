@@ -18,7 +18,7 @@ export default function Home() {
           {`Entre o silêncio e o primeiro  \n choro, existe uma história`}
         </h2>
         <p
-          className={`text-center lg:w-6/12 whitespace-pre-line md:whitespace-normal center-description-small font-nunito leading-relaxed text-lg lg:text-2xl `}
+          className={`mb-4 mt-4 text-center lg:w-6/12 whitespace-pre-line md:whitespace-normal center-description-small font-nunito leading-relaxed text-lg lg:text-2xl `}
         >
           {`Registros espontâneos, cheios de verdade. Um olhar sensível para momentos que merecem ser
                 lembrados como realmente foram. `}
