@@ -27,7 +27,7 @@ export function Footer() {
               href={'l'}
               className="text-sm md:text-kalita-brown-medium"
             >
-             <span className="text-kalita-bg-light-brown flex gap-2">
+             <span className="text-kalita-bg-light-brown flex gap-2 md:hidden">
               <BsInstagram />
               Me Acompanhe no Instagram
               

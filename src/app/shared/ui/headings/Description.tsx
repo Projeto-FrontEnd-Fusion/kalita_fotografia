@@ -32,7 +32,7 @@ export const Description = ({ content, addClass, ...props }: DescriptionProps) =
   return (
     <p
       {...props}
-      className={`lg:w-8/12 whitespace-pre-line md:whitespace-normal center-description-small font-nunito leading-relaxed text-lg lg:text-2xl ${addClass}`}
+      className={`text-center lg:w-8/12 whitespace-pre-line md:whitespace-normal center-description-small font-nunito leading-relaxed text-lg lg:text-2xl ${addClass}`}
     >
       {displayContent}
       

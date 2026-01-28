@@ -57,7 +57,7 @@ export function Header() {
           <MenuButton />
         </div>
       </div>
-      <div className='border-b border-kalita-bg-light-brown w-[90%] bottom-4 absolute left-1/2 transform -translate-1/2'></div>
+      <div className='md:border-none border-b border-kalita-bg-light-brown w-[90%] bottom-4 absolute left-1/2 transform -translate-1/2'></div>
     </header>
   )
 }

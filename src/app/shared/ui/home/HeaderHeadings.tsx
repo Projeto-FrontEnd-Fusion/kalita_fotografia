@@ -7,7 +7,7 @@ export const HeaderHeadings = () => {
   
  
   return (
-    <section className="max-w-[1215px] flex justify-center items-center gap-10 lg:gap-20 md:mx-auto">
+    <section key={1} className="max-w-[1215px] flex justify-center items-center gap-10 lg:gap-20 md:mx-auto">
       <HeroMosaic />
 
       <article className=" headings-container lg:text-left lg:items-start md:w-5/12 flex flex-col gap-2 md:gap-4 items-center">
